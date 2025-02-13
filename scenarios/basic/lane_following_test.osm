@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <!-- Map -->
+  <node id='-138115' action='modify' visible='true' lat='43.51009840203' lon='-80.53746673545'>
+    <tag k='altitude' v='300' />
+    <tag k='area' v='100' />
+    <tag k='gs' v='origin' />
+  </node>
+  <node id='-143131' action='modify' visible='true' lat='43.50989926156' lon='-80.53515960547'>
+    <tag k='collision' v='yes' />
+    <tag k='gs' v='globalconfig' />
+    <tag k='lanelet' v='maps/experimental_maps/lanelet2_bathurst.osm' />
+    <tag k='mutate' v='no' />
+    <tag k='name' v='gs_bathurst_double_loop' />
+    <tag k='timeout' v='175' />
+    <tag k='version' v='2.0' />
+  </node>
+  <!-- Vehicle Under Test -->
+  <node id='-1145799' action='modify' visible='true' lat='43.50936347065' lon='-80.53637387889'>
+    <tag k='btype' v='SDV' />
+    <tag k='cycles' v='1' />
+    <tag k='goal_ends_simulation' v='yes' />
+    <tag k='gs' v='vehicle' />
+    <tag k='name' v='inner_loop_driver' />
+    <tag k='route' v='inner_double_loop' />
+    <tag k='rule_engine_port' v='5001' />
+    <tag k='vid' v='1' />
+    <tag k='yaw' v='150' />
+  </node>
+  <node id='-1156014' action='modify' visible='true' lat='43.50934070315' lon='-80.5364377581' />
+  <node id='-1156015' action='modify' visible='true' lat='43.51034493152' lon='-80.53713278451' />
+  <node id='-1156016' action='modify' visible='true' lat='43.51129375923' lon='-80.53449075816' />
+  <node id='-1156017' action='modify' visible='true' lat='43.51025877635' lon='-80.53380421671' />
+  <node id='-1156018' action='modify' visible='true' lat='43.50934657723' lon='-80.53641615866' />
+  <way id='-1145720' action='modify' visible='true'>
+    <nd ref='-1156014' />
+    <nd ref='-1156015' />
+    <nd ref='-1156016' />
+    <nd ref='-1156017' />
+    <nd ref='-1156018' />
+    <tag k='gs' v='route' />
+    <tag k='name' v='inner_double_loop' />
+  </way>
+</osm>

@@ -1,0 +1,25 @@
+{
+  "name": "geoscenario-orchestrator-prod",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drodeur/geoscenario-orchestrator-prod"
+  },
+  "config": {
+    "bundle": {
+      "ruleengine": "rule-engine.js"
+    },
+    "root": {
+      "ruleengine": ".",
+      "scenarios": ""
+    },
+    "port": {
+      "models": 5002,
+      "ruleengine": 5001
+    }
+  },
+  "scripts": {
+    "start": "node rule-engine.js & node orchestrator.js; kill $(lsof -t -i:5001)"
+  },
+  "dependencies": {}
+}
