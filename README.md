@@ -2,32 +2,23 @@
 
 ## Getting started
 
-Install Geoscenarioserver
+Install GeoScenario-Orchestrator
 
 ```
-git clone https://github.com/rodrigoqueiroz/geoscenarioserver.git
-conda create -n geoscenario python=3.8
-conda activate geoscenario
-cd geoscenarioserver
-pip3 install -r requirements.txt
+$ git clone --recurse-submodules https://github.com/drodeur/geoscenario-orchestrator-prod.git
+$ cd geoscenario-orchestrator-prod
+$ bash geoscenarioserver/scripts/setup-conda-forge-env.bash
 ```
+The script requires an installation of micromamba (recommended) or mamba, follow the instructions to install.
+Re-open the terminal if required and run the script again to install the environment `gss`.
 
-Install Geoscenario-Orchestrator
-
-```
-git clone https://github.com/drodeur/geoscenario-orchestrator-prod.git
-curl -sL https://deb.nodesource.com/setup_22.x  | bash -
-apt-get -y install nodejs
-npm i cross-env -g
-```
-
-Define the following in **~/.bashrc**
+Install nodejs and the packages:
 
 ```
-conda activate geoscenario
-export ORCHESTRATOR_ROOT=~/ROOT_TO_FOLDER/geoscenario-orchestrator-prod
-export SERVER_ROOT=~/ROOT_TO_FOLDER/geoscenarioserver
-export VIOLATION_REPORT_FOLDER=$ORCHESTRATOR_ROOT/results
+$ source env_setup.bash
+$ micromamba install -y nodejs
+...
+$ npm i cross-env -g
 ```
 
 ## Start the Orchestrator
@@ -35,7 +26,7 @@ export VIOLATION_REPORT_FOLDER=$ORCHESTRATOR_ROOT/results
 Put your template rules in **ManeuverTemplates.json** and run those commands when you want to test your template.
 
 ```
-source ~/.bashrc
+source env_setup.bash
 cd $ORCHESTRATOR_ROOT
 npm start
 ```
