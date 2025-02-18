@@ -1,0 +1,3 @@
+[submodule "geoscenarioserver"]
+	path = geoscenarioserver
+	url = git@github.com:rodrigoqueiroz/geoscenarioserver.git
